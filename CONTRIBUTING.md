@@ -12,7 +12,9 @@ Thank you for your interest in contributing to this collection!
    - **Main README.md**: Add your agent to the appropriate category section in alphabetical order
    - **Category README.md**: Add detailed description, update Quick Selection Guide table, and if applicable, Common Technology Stacks
    - **Your agent .md file**: Create the actual agent definition following the template
-4. **Submit a PR** - Include a clear description of the subagent's purpose
+   - **Skills when referenced**: Add `skills/<skill-name>/SKILL.md`, declare `"skills": "skills"` in the category manifest, and list the skill names in agent frontmatter
+4. **Run validation** - Run `npm run validate` to check plugin manifests, agent frontmatter, naming, versions, and documentation links.
+5. **Submit a PR** - Include a clear description of the subagent's purpose
 
 ### Subagent Requirements
 
@@ -39,7 +41,7 @@ When you add a new agent, you MUST update these files:
    - Update the "Quick Selection Guide" table
    - If applicable, add to "Common Technology Stacks" section
    
-3. **Your Agent File** (e.g., `categories/02-language-specialists/your-agent.md`)
+3. **Your Agent File** (e.g., `categories/02-language-specialists/agents/your-agent.md`)
    - Follow the standard template structure
    - Include all required sections
 
@@ -52,7 +54,7 @@ When you modify existing plugin content, you MUST bump versions so users can rec
    - Increment `version` whenever any `*.md` file in that category changes.
 
 2. **Keep marketplace plugin versions in sync**
-   - File: `.zcode-plugin/marketplace.json`
+   - File: `marketplace.json` (repository root)
    - Update the corresponding plugin entry version to match the category plugin version.
 
 ### Adding a Tool

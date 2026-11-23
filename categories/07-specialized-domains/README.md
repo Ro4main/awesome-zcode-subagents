@@ -17,78 +17,88 @@ Use these subagents when you need to:
 
 ## Available Subagents
 
-### [**api-documenter**](api-documenter.md) - API documentation specialist
+### [**api-documenter**](agents/api-documenter.md) - API documentation specialist
 API documentation expert creating developer-friendly API docs. Masters OpenAPI/Swagger, interactive documentation, and API best practices. Makes APIs discoverable and easy to integrate.
 
 **Use when:** Documenting REST APIs, creating API specifications, building developer portals, generating client SDKs, or improving API discoverability.
 
-### [**blockchain-developer**](blockchain-developer.md) - Web3 and crypto specialist
+### [**blockchain-developer**](agents/blockchain-developer.md) - Web3 and crypto specialist
 Blockchain expert building decentralized applications and smart contracts. Masters Ethereum, Solidity, and Web3 technologies. Creates secure, efficient blockchain solutions.
 
 **Use when:** Building dApps, writing smart contracts, implementing DeFi protocols, creating NFT platforms, or integrating blockchain features.
 
-### [**email-deliverability-engineer**](email-deliverability-engineer.md) - Email deliverability specialist
+### [**email-deliverability-engineer**](agents/email-deliverability-engineer.md) - Email deliverability specialist
 Email deliverability expert getting mail into the inbox reliably at scale. Masters SPF/DKIM/DMARC authentication, sending infrastructure, and provider integration. Builds compliant, monitored sending pipelines with high inbox placement.
 
 **Use when:** Configuring email authentication, diagnosing deliverability issues, integrating transactional/marketing email providers, managing list hygiene, or ensuring CAN-SPAM/GDPR compliance.
 
-### [**embedded-systems**](embedded-systems.md) - Embedded and real-time systems expert
+### [**embedded-systems**](agents/embedded-systems.md) - Embedded and real-time systems expert
 Embedded systems specialist working with constrained environments. Expert in microcontrollers, RTOS, and hardware interfaces. Builds efficient software for resource-limited devices.
 
 **Use when:** Programming microcontrollers, developing firmware, implementing real-time systems, optimizing for memory/power, or interfacing with hardware.
 
-### [**fintech-engineer**](fintech-engineer.md) - Financial technology specialist
+### [**fintech-engineer**](agents/fintech-engineer.md) - Financial technology specialist
 Fintech expert building secure, compliant financial applications. Masters payment processing, regulatory requirements, and financial APIs. Navigates the complex world of financial technology.
 
 **Use when:** Building payment systems, implementing banking features, ensuring financial compliance, integrating financial APIs, or developing trading platforms.
 
-### [**game-developer**](game-developer.md) - Game development expert
+### [**game-developer**](agents/game-developer.md) - Game development expert
 Gaming specialist creating engaging interactive experiences. Expert in game engines, real-time networking, and performance optimization. Builds games that captivate players.
 
 **Use when:** Developing games, implementing game mechanics, optimizing game performance, building multiplayer features, or creating game tools.
 
-### [**healthcare-admin**](healthcare-admin.md) - Healthcare administration specialist
+### [**healthcare-admin**](agents/healthcare-admin.md) - Healthcare administration specialist
 
 Healthcare operations expert backed by 51 specialized sub-agents covering revenue cycle management, HIPAA/compliance, medical coding (ICD-10, CPT, DRGs), CMS cost reports, payer contract analysis, quality improvement, clinical operations, health IT/interoperability, population health, and pharmacy benefits. Each sub-agent averages 420+ lines of domain knowledge with real CFR citations and deliverable templates. Integrates with CMS HCRIS, PECOS, NHSN, Epic Caboodle/Cogito, and CAQH ProView.
 
 **Use when:** Conducting HIPAA audits, preparing Medicare cost reports, managing denial appeals, modeling value-based care contracts, optimizing clinical documentation, preparing for accreditation surveys, or building population health programs.
 
-### [**hipaa-compliance**](hipaa-compliance.md) - HIPAA compliance specialist for healthcare SaaS
+### [**hipaa-compliance**](agents/hipaa-compliance.md) - HIPAA compliance specialist for healthcare SaaS
 HIPAA compliance expert for technology vendors handling Protected Health Information (PHI). Covers Business Associate classification, BAA requirements, the 18 PHI identifiers, all three HIPAA safeguard categories (administrative, physical, technical), breach notification timelines, and a step-by-step compliance roadmap for SaaS vendors.
 
 **Use when:** Determining if your product requires a BAA, implementing HIPAA safeguards, responding to a PHI breach, preparing for a HIPAA audit, or onboarding a healthcare enterprise customer.
 
-### [**iot-engineer**](iot-engineer.md) - IoT systems developer
+### [**iot-engineer**](agents/iot-engineer.md) - IoT systems developer
 IoT expert connecting physical devices to the cloud. Masters device protocols, edge computing, and IoT platforms. Creates scalable solutions for the Internet of Things.
 
 **Use when:** Building IoT applications, implementing device communication, managing IoT fleets, processing sensor data, or designing IoT architectures.
 
-### [**mobile-app-developer**](mobile-app-developer.md) - Mobile application specialist
+### [**m365-admin**](agents/m365-admin.md) - Microsoft 365 administration specialist
+Microsoft 365 specialist covering administration of Exchange Online, Teams, SharePoint, identity, and related tenant services.
+
+**Use when:** Administering Microsoft 365 tenants, configuring Exchange Online or Teams, managing SharePoint, or troubleshooting Microsoft 365 services.
+
+### [**mobile-app-developer**](agents/mobile-app-developer.md) - Mobile application specialist
 Mobile expert creating native and cross-platform applications. Masters iOS/Android development, mobile UI/UX, and app store deployment. Builds apps users love on their devices.
 
 **Use when:** Creating mobile apps, implementing native features, optimizing mobile performance, handling offline functionality, or deploying to app stores.
 
-### [**payment-integration**](payment-integration.md) - Payment systems expert
+### [**motion-director**](agents/motion-director.md) - Motion graphics and video rendering specialist
+Creative technologist directing and rendering launch-quality 2D/3D motion films, UI walkthroughs, kinetic typography posters, and physics simulations in code with deterministic 60 FPS video export.
+
+**Use when:** Directing programmatic video, rendering Three.js/WebGL scenes, building kinetic typography, simulating deterministic physics, or exporting frame-exact MP4/WebM videos.
+
+### [**payment-integration**](agents/payment-integration.md) - Payment systems expert
 Payment specialist integrating various payment providers and methods. Expert in PCI compliance, payment security, and transaction handling. Makes payments seamless and secure.
 
 **Use when:** Integrating payment gateways, implementing subscriptions, handling PCI compliance, processing transactions, or building checkout flows.
 
-### [**quant-analyst**](quant-analyst.md) - Quantitative analysis specialist
+### [**quant-analyst**](agents/quant-analyst.md) - Quantitative analysis specialist
 Quantitative expert developing financial algorithms and models. Masters statistical analysis, risk modeling, and algorithmic trading. Turns market data into profitable strategies.
 
 **Use when:** Building trading algorithms, developing risk models, analyzing financial data, implementing quantitative strategies, or backtesting systems.
 
-### [**risk-manager**](risk-manager.md) - Risk assessment and management expert
+### [**risk-manager**](agents/risk-manager.md) - Risk assessment and management expert
 Risk management specialist identifying and mitigating various risks. Expert in risk modeling, compliance, and mitigation strategies. Protects systems and businesses from potential threats.
 
 **Use when:** Assessing technical risks, implementing risk controls, building risk models, ensuring compliance, or developing risk management systems.
 
-### [**seo-specialist**](seo-specialist.md) - Search engine optimization expert
+### [**seo-specialist**](agents/seo-specialist.md) - Search engine optimization expert
 SEO expert driving organic traffic through search optimization. Masters technical SEO, content strategy, and link building. Improves search rankings and visibility through data-driven strategies.
 
 **Use when:** Optimizing for search engines, implementing structured data, improving site speed, building content strategies, or analyzing search performance.
 
-### [**x-api-integration**](x-api-integration.md) - X/Twitter API integration specialist
+### [**x-api-integration**](agents/x-api-integration.md) - X/Twitter API integration specialist
 X/Twitter API expert building reliable social data workflows. Masters tweet search, monitoring, webhooks, OpenAPI contracts, MCP tools, provider selection, and safe credential handling.
 
 **Use when:** Building X/Twitter data products, integrating X API alternatives, designing tweet search workflows, documenting social data APIs, or validating social monitoring pipelines.
@@ -106,7 +116,9 @@ X/Twitter API expert building reliable social data workflows. Masters tweet sear
 | Healthcare Admin | **healthcare-admin** | Revenue cycle, HIPAA, quality |
 | HIPAA Compliance (SaaS) | **hipaa-compliance** | PHI, BAA, safeguards, breach notification |
 | IoT/Connected | **iot-engineer** | Device clouds, sensors |
+| Microsoft 365 | **m365-admin** | Exchange Online, Teams, SharePoint |
 | Mobile Apps | **mobile-app-developer** | iOS/Android apps |
+| Motion Graphics / Video | **motion-director** | Programmatic 60 FPS video, Three.js, Canvas |
 | Payments | **payment-integration** | Payment gateways, PCI |
 | Quantitative | **quant-analyst** | Trading algorithms, risk |
 | Risk Management | **risk-manager** | Risk assessment, compliance |

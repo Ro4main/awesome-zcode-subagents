@@ -16,87 +16,97 @@ Use these subagents when you need to:
 
 ## Available Subagents
 
-### [**accessibility-tester**](accessibility-tester.md) - A11y compliance expert
+### [**accessibility-tester**](agents/accessibility-tester.md) - A11y compliance expert
 Accessibility specialist ensuring applications work for everyone. Masters WCAG guidelines, screen reader compatibility, and inclusive design. Makes applications accessible without compromising functionality.
 
 **Use when:** Implementing accessibility features, auditing for WCAG compliance, testing with assistive technologies, fixing accessibility issues, or designing inclusive interfaces.
 
-### [**ad-security-reviewer**](ad-security-reviewer.md) - Active Directory security posture and attack surface analyst
+### [**ad-security-reviewer**](agents/ad-security-reviewer.md) - Active Directory security posture and attack surface analyst
 Active Directory security specialist reviewing directory configuration, admin models, and trust boundaries. Focuses on misconfigurations, excessive privileges, legacy protocols, and hardening AD against common attack paths.
 
 **Use when:** Reviewing AD security posture, assessing privileged groups and delegation, tightening GPOs and auth settings, or planning hardening work to reduce lateral movement and domain compromise risk.
 
-### [**ai-writing-auditor**](ai-writing-auditor.md) - AI writing pattern detector and rewriter
+### [**ai-writing-auditor**](agents/ai-writing-auditor.md) - AI writing pattern detector and rewriter
 Detects 34 categories of AI writing patterns in content and rewrites text to remove them. Uses a 103-entry tiered vocabulary (P0/P1/P2 severity), content-type profiles for LinkedIn, blogs, technical docs, investor emails, documentation, and casual formats, and produces a findings table with suggested fixes. Based on the open-source [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) skill.
 
 **Use when:** Cleaning AI-assisted drafts before publishing, auditing documentation for machine-generated patterns, editing blog posts or release notes to read naturally, or running after a content-producing agent as a post-processing step.
 
-### [**architect-reviewer**](architect-reviewer.md) - Architecture review specialist
+### [**architect-reviewer**](agents/architect-reviewer.md) - Architecture review specialist
 Architecture expert evaluating system designs for scalability, maintainability, and best practices. Identifies architectural risks and suggests improvements. Ensures long-term system health.
 
 **Use when:** Reviewing architecture designs, evaluating technical decisions, identifying architectural debt, planning refactoring, or validating system design.
 
-### [**chaos-engineer**](chaos-engineer.md) - System resilience testing expert
+### [**chaos-engineer**](agents/chaos-engineer.md) - System resilience testing expert
 Resilience specialist using chaos engineering to uncover weaknesses. Masters failure injection, game days, and chaos experiments. Builds confidence in system reliability through controlled chaos.
 
 **Use when:** Testing system resilience, implementing chaos engineering, planning failure scenarios, improving fault tolerance, or validating disaster recovery.
 
-### [**code-reviewer**](code-reviewer.md) - Code quality guardian
+### [**code-reviewer**](agents/code-reviewer.md) - Code quality guardian
 Code quality expert performing thorough code reviews. Masters best practices, design patterns, and code smells. Ensures code is clean, maintainable, and follows team standards.
 
 **Use when:** Reviewing pull requests, establishing code standards, identifying technical debt, mentoring developers, or improving code quality.
 
-### [**compliance-auditor**](compliance-auditor.md) - Regulatory compliance expert
+### [**compliance-auditor**](agents/compliance-auditor.md) - Regulatory compliance expert
 Compliance specialist ensuring adherence to regulations and standards. Masters GDPR, HIPAA, SOC2, and industry-specific requirements. Navigates complex compliance landscapes with expertise.
 
 **Use when:** Achieving regulatory compliance, implementing data privacy, preparing for audits, documenting compliance, or understanding regulations.
 
-### [**gdpr-ccpa-compliance**](gdpr-ccpa-compliance.md) - GDPR and CCPA privacy compliance specialist
+### [**gdpr-ccpa-compliance**](agents/gdpr-ccpa-compliance.md) - GDPR and CCPA privacy compliance specialist
 Privacy compliance expert covering GDPR (EU) and CCPA/CPRA (California). Identifies legal bases for processing, maps data subject rights to product requirements, and provides actionable compliance checklists for product and engineering teams.
 
 **Use when:** Assessing GDPR or CCPA compliance gaps, implementing data subject rights (access, deletion, portability), reviewing consent flows, preparing for a privacy audit, or onboarding a new data processor.
 
-### [**debugger**](debugger.md) - Advanced debugging specialist
+### [**debugger**](agents/debugger.md) - Advanced debugging specialist
 Debugging expert solving the most complex issues. Masters debugging tools, techniques, and methodologies across languages and platforms. Finds root causes where others give up.
 
 **Use when:** Debugging complex issues, analyzing memory leaks, investigating race conditions, profiling applications, or solving intermittent bugs.
 
-### [**error-detective**](error-detective.md) - Error analysis and resolution expert
+### [**error-detective**](agents/error-detective.md) - Error analysis and resolution expert
 Error investigation specialist tracking down elusive bugs. Expert in log analysis, error patterns, and systematic debugging. Turns cryptic errors into actionable solutions.
 
 **Use when:** Investigating production errors, analyzing error patterns, setting up error tracking, improving error handling, or debugging distributed systems.
 
-### [**penetration-tester**](penetration-tester.md) - Ethical hacking specialist
+### [**penetration-tester**](agents/penetration-tester.md) - Ethical hacking specialist
 Security expert simulating attacks to find vulnerabilities. Masters OWASP Top 10, penetration testing tools, and exploit techniques. Thinks like an attacker to defend like a pro.
 
 **Use when:** Performing security assessments, testing for vulnerabilities, validating security fixes, implementing security testing, or preparing for external audits.
 
-### [**performance-engineer**](performance-engineer.md) - Performance optimization expert
+### [**performance-engineer**](agents/performance-engineer.md) - Performance optimization expert
 Performance specialist making applications blazing fast. Masters profiling, optimization techniques, and performance testing. Eliminates bottlenecks and optimizes resource usage.
 
 **Use when:** Optimizing application performance, conducting load testing, analyzing bottlenecks, improving response times, or reducing resource consumption.
 
-### [**powershell-security-hardening**](powershell-security-hardening.md) - PowerShell-driven security baseline specialist
+### [**ponder-auditor**](agents/ponder-auditor.md) - Convergent multi-pass audit and deliberation specialist
+Convergent multi-pass audit specialist that enforces 100% surface enumeration, runs four adversarial voices (`Skeptic` -> `delete`, `Builder` -> `edit`, `Dreamer` -> `add`, `Empath` -> `change`), retracts false positives against helpers and import graphs, and halts via epistemic silence (`0 deltas` after full verification). From the open-source [Ponder](https://github.com/Quinnod345/ponder) engine and skill (MIT).
+
+**Use when:** Auditing an entire codebase, UI surface, or security boundary where single-pass reviews miss state variants or hallucinate false positives on decoys and dead code.
+
+### [**powershell-security-hardening**](agents/powershell-security-hardening.md) - PowerShell-driven security baseline specialist
 Security-focused PowerShell expert hardening Windows servers, workstations, and automation tooling. Specializes in secure remoting, constrained endpoints, credential hygiene, logging, and aligning scripts with security baselines.
 
 **Use when:** Hardening Windows hosts, securing PowerShell remoting, locking down scripts and scheduled tasks, or aligning infrastructure automation with security baselines and compliance requirements.
 
-### [**qa-expert**](qa-expert.md) - Test automation specialist
+### [**qa-expert**](agents/qa-expert.md) - Test automation specialist
 Quality assurance master designing comprehensive test strategies. Expert in test automation, frameworks, and methodologies. Ensures quality through systematic testing approaches.
 
 **Use when:** Setting up test automation, designing test strategies, implementing CI/CD testing, improving test coverage, or establishing QA processes.
 
-### [**security-auditor**](security-auditor.md) - Security vulnerability expert
+### [**security-auditor**](agents/security-auditor.md) - Security vulnerability expert
 Security specialist conducting thorough security audits. Masters vulnerability assessment, security best practices, and remediation strategies. Protects applications from evolving threats.
 
 **Use when:** Auditing application security, implementing security best practices, fixing vulnerabilities, designing secure architectures, or training teams on security.
 
-### [**test-automator**](test-automator.md) - Test automation framework expert
+### [**surgeon-reviewer**](agents/surgeon-reviewer.md) - Zero-noise code review specialist
+Code review specialist that reports only real problems — bugs, money-losing logic, maintenance traps — ranked by blast radius across three fixed severity tiers (WILL BREAK / WILL COST / WILL ROT). Never comments on style, naming, or taste, and ends every review with a SHIP / SHIP WITH FIXES / DO NOT SHIP verdict. From the open-source [Agent Pack](https://github.com/LucianFord/agent-pack) collection (MIT).
+
+**Use when:** Reviewing pull requests, running pre-merge checks, auditing AI-generated code, or when review noise is drowning out the findings that actually matter.
+
+### [**test-automator**](agents/test-automator.md) - Test automation framework expert
 Automation specialist building robust test frameworks. Expert in various testing tools, patterns, and strategies. Creates maintainable, reliable automated test suites.
 
 **Use when:** Building test frameworks, automating test cases, integrating tests with CI/CD, improving test reliability, or scaling test automation.
 
-### [**ui-ux-tester**](ui-ux-tester.md) - Exhaustive documented-flow UI tester
+### [**ui-ux-tester**](agents/ui-ux-tester.md) - Exhaustive documented-flow UI tester
 Interaction-heavy testing specialist that drives web or desktop interfaces against documented user flows and records visual, logical, and usability defects. Focuses on end-user behavior, state transitions, and defect reporting rather than generic QA process design.
 
 **Use when:** Testing every documented UI feature, validating real user flows, probing confusing UX behavior, checking visual consistency, or generating structured defect reports with screenshots and repro steps.
@@ -116,8 +126,10 @@ Interaction-heavy testing specialist that drives web or desktop interfaces again
 | Investigate errors | **error-detective** |
 | Test security | **penetration-tester** |
 | Optimize performance | **performance-engineer** |
+| Convergent multi-pass audit with zero false positives | **ponder-auditor** |
 | Automate testing | **qa-expert** |
 | Audit security | **security-auditor** |
+| Zero-noise review with ship verdict | **surgeon-reviewer** |
 | Build test frameworks | **test-automator** |
 | Exhaustively test UI flows | **ui-ux-tester** |
 

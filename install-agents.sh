@@ -37,6 +37,7 @@ GITHUB_RAW_BASE="https://raw.githubusercontent.com/a2mus/awesome-zcode-subagents
 # Cache for remote data
 REMOTE_CATEGORIES=()
 REMOTE_AGENTS=()
+REMOTE_AGENTS_SUBDIR=""
 
 # Parse CLI arguments
 for arg in "$@"; do
@@ -76,6 +77,16 @@ has_local_opencode_dir() {
 
 has_local_categories() {
     [[ -d "$CATEGORIES_DIR" ]]
+}
+
+get_local_agents_dir() {
+    local category="$1"
+    local category_dir="$CATEGORIES_DIR/$category"
+    if [[ -d "$category_dir/agents" ]]; then
+        echo "$category_dir/agents"
+    else
+        echo "$category_dir"
+    fi
 }
 
 check_curl() {
@@ -118,6 +129,15 @@ fetch_agents_remote() {
 
     if echo "$response" | grep -q '"message"'; then
         return 1
+    fi
+
+    REMOTE_AGENTS_SUBDIR=""
+    if echo "$response" | grep -q '"name": "agents"'; then
+        response=$(curl -s "$GITHUB_API_BASE/categories/$category/agents")
+        REMOTE_AGENTS_SUBDIR="agents/"
+        if echo "$response" | grep -q '"message"'; then
+            return 1
+        fi
     fi
 
     REMOTE_AGENTS=()
@@ -171,7 +191,7 @@ download_agent() {
     local category="$1"
     local agent_file="$2"
     local dest_path="$3"
-    local url="$GITHUB_RAW_BASE/categories/$category/$agent_file"
+    local url="$GITHUB_RAW_BASE/categories/$category/${REMOTE_AGENTS_SUBDIR}$agent_file"
 
     if curl -sS "$url" -o "$dest_path" 2>/dev/null; then
         sed -i.bak '/^model: \(sonnet\|opus\|haiku\)$/d' "$dest_path" 2>/dev/null && rm -f "$dest_path.bak"
@@ -375,7 +395,8 @@ select_category() {
                 if [[ "$dirname" =~ ^[0-9]+ ]]; then
                     categories+=("$dirname")
                     local display_name=$(get_category_name "$dirname")
-                    local agent_count=$(ls "$dir"/*.md 2>/dev/null | grep -v README.md | wc -l | tr -d ' ')
+                    local agents_dir=$(get_local_agents_dir "$dirname")
+                    local agent_count=$(ls "$agents_dir"/*.md 2>/dev/null | grep -v README.md | wc -l | tr -d ' ')
                     echo -e "  ${YELLOW}$i)${NC} $display_name ${CYAN}($agent_count agents)${NC}"
                     ((i++))
                 fi
@@ -431,7 +452,7 @@ select_agents() {
             fi
         done
     else
-        local category_path="$CATEGORIES_DIR/$category"
+        local category_path=$(get_local_agents_dir "$category")
         for agent_file in "$category_path"/*.md; do
             local basename=$(basename "$agent_file")
             if [[ "$basename" != "README.md" ]]; then
@@ -604,7 +625,7 @@ confirm_and_apply() {
                         echo -e "${RED}✗${NC} Failed to download: $agent_file"
                     fi
                 else
-                    local source_path="$CATEGORIES_DIR/$category/$agent_file"
+                    local source_path="$(get_local_agents_dir "$category")/$agent_file"
                     if [[ -f "$source_path" ]]; then
                         cp "$source_path" "$TARGET_AGENTS_DIR/$agent_file"
                         format_agent_for_destination "$TARGET_AGENTS_DIR/$agent_file"

@@ -4,7 +4,7 @@ This file provides guidance to AI coding assistants (ZCode and OpenCode) when wo
 
 ## Project Overview
 
-This is a curated collection of 158+ subagent definitions - specialized AI assistants for specific development tasks. Subagents are markdown files with YAML frontmatter that both **ZCode** and **OpenCode** can load and use.
+This is a curated collection of 170+ subagent definitions - specialized AI assistants for specific development tasks. Subagents are markdown files with YAML frontmatter that both **ZCode** and **OpenCode** can load and use.
 
 - **ZCode** stores subagents in `~/.zcode/agents/` (global) or `.zcode/agents/` (local).
 - **OpenCode** stores subagents in `~/.config/opencode/agents/` (global) or `.opencode/agents/` (project-level).
@@ -15,24 +15,24 @@ This is a curated collection of 158+ subagent definitions - specialized AI assis
 
 ```
 categories/
-  01-core-development/     # Backend, frontend, fullstack, mobile, etc.
-  02-language-specialists/ # Language/framework experts (TypeScript, Python, etc.)
-  03-infrastructure/       # DevOps, cloud, Kubernetes, etc.
-  04-quality-security/     # Testing, security auditing, code review
-  05-data-ai/              # ML, data engineering, AI specialists
-  06-developer-experience/ # Tooling, documentation, DX optimization
-  07-specialized-domains/  # Blockchain, IoT, fintech, gaming
-  08-business-product/     # Product management, business analysis
-  09-meta-orchestration/   # Multi-agent coordination
-  10-research-analysis/    # Research and analysis specialists
-.zcode-plugin/             # Marketplace manifest (root)
-  marketplace.json
+  <category>/
+    agents/                # Markdown agent definitions discovered by ZCode
+    skills/                # Optional bundled skills
+      <skill-name>/
+        SKILL.md
+    .zcode-plugin/
+      plugin.json          # Category plugin manifest
+    README.md
+marketplace.json           # Marketplace manifest (repository root)
 bin/
   cli.js                   # Cross-platform CLI installer (ZCode & OpenCode)
+tools/
+  sync-claude-subagents.js # New-agent report/import from the Claude reference
+  validate-subagents.js    # Marketplace, agent and documentation validation
 install-agents.sh          # Interactive bash installer
 ```
 
-Each category directory also carries its own `.zcode-plugin/plugin.json` manifest that lists its agents; ZCode installs categories as plugins from these manifests.
+Every category directory carries its own `.zcode-plugin/plugin.json` manifest, stores definitions in `agents/`, and declares `"agents": "agents"` so ZCode can discover them after plugin installation. Categories with bundled skills also declare `"skills": "skills"`, store each skill in `skills/<name>/SKILL.md`, and reference those names in agent frontmatter. Both installers understand the legacy root-level agent layout for compatibility with older checkouts. Use the plugin marketplace for skill-backed categories because agent-only installers do not copy skills.
 
 ## Subagent File Format
 
@@ -68,6 +68,7 @@ You are a [role description]...
 | `permission` | Ignored | Supported | OpenCode granular permissions (`edit: deny`, `bash: deny`, etc.) |
 | `model` | Model ID | Model ID | Omit or use `inherit` to follow parent agent model |
 | `thoughtLevel` | Reasoning level | Passed to provider | e.g. `high` |
+| `skills` | Skill name list | Removed by OpenCode installer | Reference bundled or discovered skills by name |
 | `color` | Preset color | Hex or theme name | Visual identity |
 | `maxTurns` / `steps` | Positive integer | Positive integer | Maximum iteration turns |
 
@@ -125,5 +126,21 @@ When adding a new agent, update these files:
 
 1. **Main README.md** - Add link in appropriate category (alphabetical order)
 2. **Category README.md** - Add detailed description, update Quick Selection Guide table
-3. **Agent .md file** - Create definition with `mode: subagent` included in YAML frontmatter
-4. **Category plugin.json** - Bump the version in `categories/<category>/.zcode-plugin/plugin.json` and keep the matching version in `.zcode-plugin/marketplace.json` in sync (CI enforces this)
+3. **Agent .md file** - Create the definition with `mode: subagent` included in YAML frontmatter under the category's `agents/` directory.
+4. **Category plugin.json** - Bump the version in `categories/<category>/.zcode-plugin/plugin.json` and keep the matching version in the root `marketplace.json` in sync (CI enforces this). Every Markdown file under `agents/` is discovered automatically; do not add a per-file list.
+
+## Validation and Upstream Reference
+
+Run the repository validator after changes:
+
+```bash
+npm run validate
+```
+
+Compare against a local `awesome-claude-code-subagents` checkout and report new or changed agents:
+
+```bash
+npm run sync:claude -- --source /path/to/awesome-claude-code-subagents
+```
+
+Use `--apply` to import only agents that do not exist locally. The sync tool adds `mode: subagent`, removes Claude-specific model aliases, and never overwrites or deletes existing local agents. Review imported definitions, update both README files, bump the affected plugin versions, and run the validator again.

@@ -5,15 +5,15 @@
     "url": "https://github.com/VoltAgent"
   },
   "metadata": {
-    "version": "1.0.5",
-    "description": "Curated collection of 158 specialized ZCode subagents organized into 10 focused categories"
+    "version": "1.2.0",
+    "description": "Curated collection of 170 specialized ZCode subagents organized into 11 focused categories"
   },
   "plugins": [
     {
       "name": "zcode-core-dev",
       "source": "./categories/01-core-development",
       "description": "Essential development subagents for everyday coding tasks - backend, frontend, fullstack, mobile, and API design",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "category": "development",
       "keywords": [
         "backend",
@@ -28,7 +28,7 @@
       "name": "zcode-lang",
       "source": "./categories/02-language-specialists",
       "description": "Language-specific expert agents with deep framework knowledge - Python, TypeScript, Go, Rust, Java, and more",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "development",
       "keywords": [
         "python",
@@ -48,7 +48,7 @@
       "name": "zcode-infra",
       "source": "./categories/03-infrastructure",
       "description": "DevOps, cloud, and deployment specialists - Kubernetes, Terraform, AWS, Azure, GCP, and SRE",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "category": "infrastructure",
       "keywords": [
         "devops",
@@ -66,7 +66,7 @@
       "name": "zcode-qa-sec",
       "source": "./categories/04-quality-security",
       "description": "Testing, security, and code quality experts - code review, penetration testing, QA automation",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "category": "quality",
       "keywords": [
         "testing",
@@ -83,7 +83,7 @@
       "name": "zcode-data-ai",
       "source": "./categories/05-data-ai",
       "description": "Data engineering, ML, and AI specialists - data pipelines, machine learning, LLM architecture",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "category": "data",
       "keywords": [
         "data-engineering",
@@ -98,7 +98,7 @@
       "name": "zcode-dev-exp",
       "source": "./categories/06-developer-experience",
       "description": "Tooling and developer productivity experts - CLI tools, documentation, README generation, and DX optimization",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "category": "tooling",
       "keywords": [
         "developer-experience",
@@ -114,7 +114,7 @@
       "name": "zcode-domains",
       "source": "./categories/07-specialized-domains",
       "description": "Domain-specific technology experts - blockchain, fintech, gaming, IoT, payments, X/Twitter APIs",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "specialized",
       "keywords": [
         "blockchain",
@@ -131,7 +131,7 @@
       "name": "zcode-biz",
       "source": "./categories/08-business-product",
       "description": "Product, legal, and business specialists - product strategy, licensing, project management, UX research",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "business",
       "keywords": [
         "product-management",
@@ -147,7 +147,7 @@
       "name": "zcode-meta",
       "source": "./categories/09-meta-orchestration",
       "description": "Agent coordination and meta-programming - multi-agent orchestration, workflow automation, and safe refactor governance. Works best with other zcode plugins installed.",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "orchestration",
       "keywords": [
         "multi-agent",
@@ -163,7 +163,7 @@
       "name": "zcode-research",
       "source": "./categories/10-research-analysis",
       "description": "Research, search, and analysis specialists - market research, competitive analysis, trend forecasting, and idea validation",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "category": "research",
       "keywords": [
         "research",
@@ -173,6 +173,23 @@
         "trends",
         "idea-validation",
         "product-strategy"
+      ]
+    },
+    {
+      "name": "zcode-performance-engineering",
+      "source": "./categories/11-performance-engineering",
+      "description": "Evidence-driven GPU kernel optimization with shared benchmarking, profiling and independent verification roles",
+      "version": "0.1.0",
+      "category": "performance",
+      "keywords": [
+        "performance",
+        "gpu",
+        "cuda",
+        "triton",
+        "profiling",
+        "benchmark",
+        "nsight",
+        "kernel-optimization"
       ]
     }
   ]

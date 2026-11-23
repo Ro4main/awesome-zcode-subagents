@@ -1,6 +1,6 @@
 {
   "name": "zcode-data-ai",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Data engineering, ML, and AI specialists - data pipelines, machine learning, LLM architecture",
   "author": {
     "name": "VoltAgent Community",
@@ -8,19 +8,5 @@
   },
   "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
   "license": "MIT",
-  "agents": [
-    "./ai-engineer.md",
-    "./data-analyst.md",
-    "./data-engineer.md",
-    "./data-scientist.md",
-    "./database-optimizer.md",
-    "./llm-architect.md",
-    "./machine-learning-engineer.md",
-    "./ml-engineer.md",
-    "./mlops-engineer.md",
-    "./nlp-engineer.md",
-    "./postgres-pro.md",
-    "./prompt-engineer.md",
-    "./reinforcement-learning-engineer.md"
-  ]
+  "agents": "agents"
 }

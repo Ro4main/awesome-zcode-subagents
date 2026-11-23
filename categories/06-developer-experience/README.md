@@ -16,80 +16,85 @@ Use these subagents when you need to:
 
 ## Available Subagents
 
-### [**build-engineer**](build-engineer.md) - Build system specialist
+### [**build-engineer**](agents/build-engineer.md) - Build system specialist
 Build optimization expert making compilation and bundling lightning fast. Masters various build tools, optimization techniques, and caching strategies. Reduces build times from minutes to seconds.
 
 **Use when:** Optimizing build times, configuring build tools, implementing build caching, setting up monorepo builds, or troubleshooting build issues.
 
-### [**cli-developer**](cli-developer.md) - Command-line tools and automation specialist
+### [**cli-developer**](agents/cli-developer.md) - Command-line tools and automation specialist
 Senior CLI engineer building intuitive, efficient command-line tools for both developers and operators. Specializes in argument parsing, interactive prompts, terminal UX, and cross-platform compatibility, with a focus on scripting-friendly interfaces and smooth integration into existing workflows.
 
 **Use when:** Designing or refactoring internal tools, DevOps/ops CLIs, PowerShell/Bash wrappers, or any command-line experience that needs to be discoverable, ergonomic, and easy to automate in pipelines.
 
-### [**dependency-manager**](dependency-manager.md) - Package and dependency specialist
+### [**dependency-manager**](agents/dependency-manager.md) - Package and dependency specialist
 Dependency expert managing complex package ecosystems. Masters version resolution, security updates, and dependency optimization. Keeps dependencies secure and up-to-date without breaking things.
 
 **Use when:** Managing dependencies, resolving version conflicts, implementing security updates, optimizing package sizes, or setting up dependency automation.
 
-### [**docs-drift-editor**](docs-drift-editor.md) - Documentation-drift editor for isolated-worktree fixes
+### [**docs-drift-editor**](agents/docs-drift-editor.md) - Documentation-drift editor for isolated-worktree fixes
 Precise Markdown editor that updates pages after they've been flagged as drifted from a code diff — minimal edits only, no invented commands/URLs/versions, heading and anchor structure preserved. Built for the execution step of a drift-detection pipeline, working inside an isolated git worktree.
 
 **Use when:** A code change has left specific doc pages out of date and you need a surgical, zero-hallucination fix rather than a rewrite; typically invoked after a searcher/planner agent has already named the drifted pages and the reason.
 
-### [**documentation-engineer**](documentation-engineer.md) - Technical documentation expert
+### [**documentation-engineer**](agents/documentation-engineer.md) - Technical documentation expert
 Documentation specialist creating clear, comprehensive technical docs. Masters API documentation, tutorials, and developer guides. Makes complex systems understandable through great documentation.
 
 **Use when:** Writing API documentation, creating developer guides, building documentation sites, improving existing docs, or setting up documentation workflows.
 
-### [**dx-optimizer**](dx-optimizer.md) - Developer experience optimization specialist
+### [**dx-optimizer**](agents/dx-optimizer.md) - Developer experience optimization specialist
 DX expert identifying and eliminating developer friction. Analyzes workflows, tools, and processes to improve productivity. Makes development feel effortless and enjoyable.
 
 **Use when:** Improving developer workflows, analyzing productivity bottlenecks, selecting developer tools, optimizing development environments, or measuring developer experience.
 
-### [**git-workflow-manager**](git-workflow-manager.md) - Git workflow and branching expert
+### [**git-workflow-manager**](agents/git-workflow-manager.md) - Git workflow and branching expert
 Git specialist designing efficient version control workflows. Masters branching strategies, merge conflict resolution, and Git automation. Ensures smooth collaboration through Git best practices.
 
 **Use when:** Designing Git workflows, implementing branching strategies, resolving complex merges, automating Git processes, or training teams on Git.
 
-### [**legacy-modernizer**](legacy-modernizer.md) - Legacy code modernization specialist
+### [**legacy-modernizer**](agents/legacy-modernizer.md) - Legacy code modernization specialist
 Modernization expert breathing new life into old codebases. Masters incremental refactoring, dependency updates, and architecture improvements. Transforms legacy code without breaking functionality.
 
 **Use when:** Modernizing legacy applications, planning refactoring strategies, updating old frameworks, migrating to new technologies, or improving code maintainability.
 
-### [**mcp-developer**](mcp-developer.md) - Model Context Protocol specialist
+### [**mcp-developer**](agents/mcp-developer.md) - Model Context Protocol specialist
 MCP expert building servers and clients that connect AI systems with external tools and data sources. Masters protocol specification, SDK implementation, and production-ready integrations. Creates seamless bridges between AI and external services.
 
 **Use when:** Building MCP servers, creating AI tool integrations, implementing Model Context Protocol clients, connecting AI systems to external APIs, or developing AI-powered applications with external data sources.
 
-### [**readme-generator**](readme-generator.md) - Repository README generation specialist
+### [**readme-generator**](agents/readme-generator.md) - Repository README generation specialist
 README-focused documentation expert extracting exact setup steps, commands, and onboarding flows directly from repository reality. Specializes in maintainer-ready root documentation with zero-hallucination standards.
 
 **Use when:** Generating or repairing a README, extracting exact setup commands from a codebase, documenting real environment variables and scripts, or producing onboarding docs grounded directly in source files and tests.
 
-### [**powershell-module-architect**](powershell-module-architect.md) - PowerShell modules and profile architecture expert
+### [**powershell-module-architect**](agents/powershell-module-architect.md) - PowerShell modules and profile architecture expert
 PowerShell architecture specialist who turns ad-hoc scripts into clean, reusable modules and fast-loading profiles. Focuses on clear public/private function boundaries, robust parameter design, DRY helper libraries, and cross-version compatibility between Windows PowerShell 5.1 and PowerShell 7+.
 
 **Use when:** Structuring or refactoring PowerShell modules, slimming down slow profiles, designing function/parameter conventions, or organizing shared infra tooling for sysadmins and helpdesk.
 
-### [**powershell-ui-architect**](powershell-ui-architect.md) - PowerShell GUIs and TUIs specialist
+### [**powershell-ui-architect**](agents/powershell-ui-architect.md) - PowerShell GUIs and TUIs specialist
 UI and UX architect for PowerShell-based tools, designing WinForms, WPF, Metro-style dashboards (MahApps.Metro/Elysium), and terminal UIs on top of automation modules. Focuses on layering clean interfaces over reusable PowerShell/.NET logic without sacrificing maintainability.
 
 **Use when:** You need a graphical or terminal UI for PowerShell tooling, want to choose between WinForms/WPF/TUI/Metro approaches, or need help structuring XAML and event handlers around existing PowerShell modules and scripts.
 
-### [**refactoring-specialist**](refactoring-specialist.md) - Code refactoring expert
+### [**refactoring-specialist**](agents/refactoring-specialist.md) - Code refactoring expert
 Refactoring master improving code structure without changing behavior. Expert in design patterns, code smells, and safe refactoring techniques. Makes code cleaner and more maintainable.
 
 **Use when:** Refactoring complex code, eliminating code smells, implementing design patterns, improving code structure, or preparing code for new features.
 
-### [**slack-expert**](slack-expert.md) - Slack platform and @slack/bolt specialist
+### [**slack-expert**](agents/slack-expert.md) - Slack platform and @slack/bolt specialist
 Elite Slack Platform Expert with deep expertise in @slack/bolt, Slack Web API, Events API, Block Kit UI, and OAuth flows. Builds robust Slack integrations with best practices for rate limiting, security, and modern features.
 
 **Use when:** Building Slack bots, implementing slash commands, creating Block Kit interfaces, reviewing Slack code, setting up OAuth flows, or integrating with Slack's Events API.
 
-### [**tooling-engineer**](tooling-engineer.md) - Developer tooling specialist
+### [**tooling-engineer**](agents/tooling-engineer.md) - Developer tooling specialist
 Tooling expert building and integrating developer tools. Masters IDE configurations, linters, formatters, and custom tooling. Creates development environments that boost productivity.
 
 **Use when:** Setting up development tools, creating custom tooling, configuring IDEs, implementing code quality tools, or building developer platforms.
+
+### [**visual-asset-generator**](agents/visual-asset-generator.md) - Visual asset generation specialist
+Visual asset specialist using prompt-to-asset MCP integrations to create images for applications, documentation, and presentations across multiple image models.
+
+**Use when:** Generating visual assets, selecting image-generation models, or creating application and documentation artwork.
 
 ## Quick Selection Guide
 
@@ -108,6 +113,7 @@ Tooling expert building and integrating developer tools. Masters IDE configurati
 | Refactor code | **refactoring-specialist** |
 | Build Slack integrations | **slack-expert** |
 | Build dev tools | **tooling-engineer** |
+| Generate visual assets | **visual-asset-generator** |
 
 ## Common DX Patterns
 

@@ -94,12 +94,16 @@ function getCatalog() {
 
   for (const cat of categories) {
     const catDir = path.join(CATEGORIES_DIR, cat);
-    const files = fs.readdirSync(catDir, { withFileTypes: true });
+    const nestedAgentsDir = path.join(catDir, 'agents');
+    const agentsDir = fs.existsSync(nestedAgentsDir) && fs.statSync(nestedAgentsDir).isDirectory()
+      ? nestedAgentsDir
+      : catDir;
+    const files = fs.readdirSync(agentsDir, { withFileTypes: true });
     const agents = files
       .filter((f) => f.isFile() && f.name.endsWith('.md') && f.name.toLowerCase() !== 'readme.md')
       .map((f) => {
         const name = f.name.replace(/\.md$/, '');
-        const filePath = path.join(catDir, f.name);
+        const filePath = path.join(agentsDir, f.name);
         return { name, file: f.name, path: filePath, category: cat };
       })
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -230,7 +234,7 @@ function printHelp(targetDirs) {
   console.log();
   console.log(`${c.bold('INSTALLATION OPTIONS:')}`);
   console.log(`  ${c.cyan('-s, --starter')}           Install the recommended starter pack (10 essential agents)`);
-  console.log(`  ${c.cyan('-a, --all')}               Install ALL 158+ subagents into your agent directory`);
+  console.log(`  ${c.cyan('-a, --all')}               Install ALL 170+ subagents into your agent directory`);
   console.log(`  ${c.cyan('-c, --category <name>')}   Install all agents from a category (e.g. -c 01, -c infra)`);
   console.log(`  ${c.cyan('-g, --agent <names>')}     Install specific agent(s), comma-separated (e.g. -g python-pro,debugger)`);
   console.log(`  ${c.cyan('-l, --list')}              List all available categories and agents`);

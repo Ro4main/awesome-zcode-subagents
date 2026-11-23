@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - "categories/**"
-      - ".zcode-plugin/marketplace.json"
+      - "marketplace.json"
   workflow_dispatch:
 
 jobs:
@@ -15,6 +15,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Validate plugin structure and agents
+        run: node tools/validate-subagents.js
 
       - name: Validate category version bumps and marketplace sync
         shell: bash
@@ -64,14 +67,14 @@ jobs:
                   exit
                 }
                 in_plugin && $0 ~ "}" { in_plugin = 0 }
-              ' .zcode-plugin/marketplace.json
+              ' marketplace.json
             )"
 
             if [ -z "${marketplace_version}" ]; then
-              echo "::error file=.zcode-plugin/marketplace.json::Could not find plugin ${plugin_name} in marketplace manifest."
+              echo "::error file=marketplace.json::Could not find plugin ${plugin_name} in marketplace manifest."
               FAIL=1
             elif [ "${marketplace_version}" != "${category_version}" ]; then
-              echo "::error file=.zcode-plugin/marketplace.json::Version mismatch for ${plugin_name}: marketplace=${marketplace_version}, category=${category_version}."
+              echo "::error file=marketplace.json::Version mismatch for ${plugin_name}: marketplace=${marketplace_version}, category=${category_version}."
               FAIL=1
             fi
           done

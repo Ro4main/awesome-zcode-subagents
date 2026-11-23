@@ -1,0 +1,7 @@
+{
+  "name": "zcode-performance-engineering",
+  "version": "0.1.0",
+  "description": "Evidence-driven GPU kernel optimization with shared benchmarking, profiling and independent verification roles",
+  "agents": "agents",
+  "skills": "skills"
+}

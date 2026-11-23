@@ -16,57 +16,67 @@ Use these subagents when you need to:
 
 ## Available Subagents
 
-### [**agent-organizer**](agent-organizer.md) - Multi-agent coordinator
+### [**agent-installer**](agents/agent-installer.md) - Subagent catalog installer
+Catalog assistant for discovering, fetching, and installing agents from the awesome-zcode-subagents collection.
+
+**Use when:** Searching available agents, comparing categories, fetching an agent definition, or installing selected agents.
+
+### [**agent-organizer**](agents/agent-organizer.md) - Multi-agent coordinator
 Orchestration expert managing complex multi-agent collaborations. Masters task decomposition, agent selection, and result synthesis. Turns complex problems into coordinated solutions.
 
 **Use when:** Coordinating multiple agents, breaking down complex tasks, managing agent dependencies, synthesizing results, or designing agent workflows.
 
-### [**context-manager**](context-manager.md) - Context optimization expert
+### [**context-manager**](agents/context-manager.md) - Context optimization expert
 Context specialist maximizing efficiency in AI conversations. Expert in context windows, information prioritization, and memory management. Ensures optimal use of limited context space.
 
 **Use when:** Optimizing long conversations, managing context windows, prioritizing information, implementing memory systems, or handling context overflow.
 
-### [**codebase-orchestrator**](codebase-orchestrator.md) - Safe refactor governance orchestrator
+### [**codebase-orchestrator**](agents/codebase-orchestrator.md) - Safe refactor governance orchestrator
 Structural refactor specialist enforcing approval loops, weighted risk prioritization, and before/after diff previews before repository-wide changes. Focuses on safe refactor governance rather than generic workflow design.
 
 **Use when:** Mapping repository structure before large refactors, prioritizing technical debt safely, presenting explicit diff previews for approval, handling large-codebase fallback strategies, or coordinating safe structural cleanup.
 
-### [**error-coordinator**](error-coordinator.md) - Error handling and recovery specialist
+### [**error-coordinator**](agents/error-coordinator.md) - Error handling and recovery specialist
 Error handling expert ensuring graceful failure recovery. Masters error patterns, fallback strategies, and system resilience. Keeps multi-agent systems running smoothly despite failures.
 
 **Use when:** Implementing error handling, designing recovery strategies, managing cascading failures, monitoring system health, or building resilient workflows.
 
-### [**it-ops-orchestrator**](it-ops-orchestrator.md) - IT operations meta-orchestrator for PowerShell/.NET ecosystems
+### [**it-ops-orchestrator**](agents/it-ops-orchestrator.md) - IT operations meta-orchestrator for PowerShell/.NET ecosystems
 Meta-orchestrator that routes ambiguous infrastructure and operations tasks to the right specialist agents, with a strong preference for PowerShell and .NET-based workflows. Understands the roles of Windows infra, Azure, M365, and PowerShell language experts, and coordinates them to deliver end-to-end solutions.
 
 **Use when:** A task smells like IT operations or infrastructure automation but spans multiple areas (AD, DNS/DHCP, Azure, M365, PowerShell modules). This orchestrator chooses and coordinates the best subagents (e.g., windows-infra-admin, azure-infra-engineer, m365-admin, powershell-5.1-expert, powershell-7-expert, powershell-module-architect) with PowerShell as the default implementation language.
 
-### [**knowledge-synthesizer**](knowledge-synthesizer.md) - Knowledge aggregation expert
+### [**knowledge-synthesizer**](agents/knowledge-synthesizer.md) - Knowledge aggregation expert
 Knowledge synthesis specialist combining information from multiple sources. Expert in information fusion, conflict resolution, and insight generation. Creates coherent knowledge from diverse inputs.
 
 **Use when:** Combining multiple perspectives, resolving conflicting information, generating comprehensive reports, building knowledge bases, or synthesizing research.
 
-### [**multi-agent-coordinator**](multi-agent-coordinator.md) - Advanced multi-agent orchestration
+### [**memory-curator**](agents/memory-curator.md) - Long-term memory discipline across sessions
+Memory discipline specialist for agents that work across many sessions. Decides what is worth saving, recalls relevant context before acting, records corrections without erasing history, and prunes what stopped helping. Storage-agnostic: works with a confirmed project memory store or a plain files-based store.
+
+**Use when:** An agent keeps forgetting decisions between sessions, memory has grown noisy with duplicates and stale facts, corrections need to be recorded without losing history, or you are setting up a memory store and want save/recall discipline from day one.
+
+### [**multi-agent-coordinator**](agents/multi-agent-coordinator.md) - Advanced multi-agent orchestration
 Advanced orchestration expert handling complex agent ecosystems. Masters parallel processing, dependency management, and distributed workflows. Scales AI operations to enterprise level.
 
 **Use when:** Building large-scale agent systems, implementing parallel workflows, managing agent ecosystems, coordinating distributed tasks, or optimizing throughput.
 
-### [**performance-monitor**](performance-monitor.md) - Agent performance optimization
+### [**performance-monitor**](agents/performance-monitor.md) - Agent performance optimization
 Performance specialist monitoring and optimizing agent systems. Expert in metrics, bottleneck analysis, and optimization strategies. Ensures peak performance across all agents.
 
 **Use when:** Monitoring agent performance, identifying bottlenecks, optimizing workflows, implementing metrics, or improving system efficiency.
 
-### [**task-distributor**](task-distributor.md) - Task allocation specialist
+### [**task-distributor**](agents/task-distributor.md) - Task allocation specialist
 Task distribution expert optimizing work allocation across agents. Masters load balancing, capability matching, and priority scheduling. Ensures efficient use of all available agents.
 
 **Use when:** Distributing tasks among agents, implementing load balancing, optimizing task queues, managing priorities, or scheduling agent work.
 
 ### [**taskade**](https://github.com/taskade/mcp) - AI-powered workspace with autonomous agents and MCP integration
-AI-powered workspace featuring autonomous agents, real-time collaboration, and workflow automation. Provides an MCP server for ZCode integration, enabling task management, project orchestration, and multi-agent workflows directly from your development environment.
+AI-powered workspace featuring autonomous agents, real-time collaboration, and workflow automation. Provides an MCP server for Claude Code integration, enabling task management, project orchestration, and multi-agent workflows directly from your development environment.
 
-**Use when:** Managing tasks and projects with AI agents, automating workflows across teams, orchestrating multi-agent collaboration, or integrating AI-powered project management into ZCode via MCP. Website: [taskade.com](https://www.taskade.com)
+**Use when:** Managing tasks and projects with AI agents, automating workflows across teams, orchestrating multi-agent collaboration, or integrating AI-powered project management into Claude Code via MCP. Website: [taskade.com](https://www.taskade.com)
 
-### [**workflow-orchestrator**](workflow-orchestrator.md) - Complex workflow automation
+### [**workflow-orchestrator**](agents/workflow-orchestrator.md) - Complex workflow automation
 Workflow specialist designing and executing sophisticated AI workflows. Expert in workflow patterns, state management, and process automation. Transforms complex processes into smooth operations.
 
 **Use when:** Designing complex workflows, implementing process automation, managing workflow state, handling long-running processes, or building workflow engines.
@@ -75,11 +85,13 @@ Workflow specialist designing and executing sophisticated AI workflows. Expert i
 
 | If you need to... | Use this subagent |
 |-------------------|-------------------|
+| Browse and install agents | **agent-installer** |
 | Coordinate multiple agents | **agent-organizer** |
 | Govern safe repo refactors | **codebase-orchestrator** |
 | Manage context efficiently | **context-manager** |
 | Handle system errors | **error-coordinator** |
 | Combine knowledge sources | **knowledge-synthesizer** |
+| Keep long-term memory clean across sessions | **memory-curator** |
 | Scale agent operations | **multi-agent-coordinator** |
 | Monitor performance | **performance-monitor** |
 | Distribute tasks | **task-distributor** |

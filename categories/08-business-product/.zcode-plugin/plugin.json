@@ -1,6 +1,6 @@
 {
   "name": "zcode-biz",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Product, legal, and business specialists - product strategy, licensing, project management, UX research",
   "author": {
     "name": "VoltAgent Community",
@@ -8,23 +8,5 @@
   },
   "repository": "https://github.com/VoltAgent/awesome-claude-code-subagents",
   "license": "MIT",
-  "agents": [
-    "./assumption-mapping.md",
-    "./backlog-grooming.md",
-    "./business-analyst.md",
-    "./content-marketer.md",
-    "./content-quality-editor.md",
-    "./customer-success-manager.md",
-    "./growth-loops.md",
-    "./landing-page-copywriter.md",
-    "./legal-advisor.md",
-    "./license-engineer.md",
-    "./product-manager.md",
-    "./project-manager.md",
-    "./sales-engineer.md",
-    "./scrum-master.md",
-    "./technical-writer.md",
-    "./ux-researcher.md",
-    "./wordpress-master.md"
-  ]
+  "agents": "agents"
 }
